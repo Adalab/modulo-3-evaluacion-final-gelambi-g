@@ -1,16 +1,20 @@
-
+import PropTypes from "prop-types";
 
 function CharacterDetail({data}) {
-  
+
   if (data.nickName.length === 0) {
     data.nickName = "No tiene"
   }
 
-  if (data.gener === "female") {
-    data.gender = "Femenino"
+  if (data.gender === "male") {
+    data.gender = "Masculino";
+  } else if (data.gender === "female") {
+    data.gender = "Femenino";
   } else {
-    data.gender = "Masculino"
+    data.gender = "Otro";
   }
+  
+
 
   if (data.specie === "human") {
     data.specie = "Humana"
@@ -33,6 +37,10 @@ function CharacterDetail({data}) {
       <p>¿Sigue con vida?{data.alive}</p>
     </article>
   )
+}
+
+CharacterDetail.propTypes = {
+  data: PropTypes.string
 }
 
 export default CharacterDetail

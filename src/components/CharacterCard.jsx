@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-
+import PropTypes from "prop-types";
 
 function CharacterCard({info}) {
 
@@ -16,6 +16,10 @@ function CharacterCard({info}) {
     </article>
     </Link>
   )
+}
+
+CharacterCard.propTypes = {
+  info: PropTypes.object,
 }
 
 export default CharacterCard

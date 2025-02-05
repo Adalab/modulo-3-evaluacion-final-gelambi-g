@@ -12,6 +12,7 @@ function App() {
   const [filterHouse, setFilterHouse] = useState ("Gryffindor")
 
 
+
   //recibe parametro de filterHouse porque es donde se guarda la información que cambia los datos y se pinta el array de la casa seleccionada
   useEffect (() => {
     getDataApi(filterHouse).then((data) => {
@@ -43,7 +44,7 @@ function App() {
         filterName={setFilterNameCharacter} 
         filterNameCharacter={filterNameCharacter}
         notCharacters={notNameCharacter()}
-
+        
         setFilterHouse={setFilterHouse}
         filterHouse={filterHouse}/>
 

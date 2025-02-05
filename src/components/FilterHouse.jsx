@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 
 function FilterHouse({setFilterHouse,filterHouse}) {
 
@@ -13,6 +15,11 @@ function FilterHouse({setFilterHouse,filterHouse}) {
       <option value="Ravenclaw">Ravenclaw</option>
     </select>
   )
+}
+
+FilterHouse.propTypes = {
+  setFilterHouse: PropTypes.func,
+  filterHouse: PropTypes.string
 }
 
 export default FilterHouse

@@ -1,6 +1,6 @@
 import FilterCharacter from "./FilterCharacter"
 import FilterHouse from "./FilterHouse"
-
+import PropTypes from "prop-types";
 
 function Filters({filterName, filterNameCharacter, notCharacters, setFilterHouse, filterHouse}) {
 
@@ -22,4 +22,12 @@ function Filters({filterName, filterNameCharacter, notCharacters, setFilterHouse
   )
 }
 
+Filters.propTypes = {
+    filterName: PropTypes.func,
+    filterNameCharacter: PropTypes.string,
+    notCharacters: PropTypes.string,
+    setFilterHouse: PropTypes.func,
+    filterHouse: PropTypes.string
+  }
+  
 export default Filters

@@ -1,4 +1,4 @@
-
+import PropTypes from "prop-types";
 
 function FilterCharacter({filterName, filterNameCharacter, notCharacters}) {
 
@@ -14,6 +14,12 @@ function FilterCharacter({filterName, filterNameCharacter, notCharacters}) {
 
     </div>
   )
+}
+
+FilterCharacter.propTypes = {
+    filterName: PropTypes.func,
+    filterNameCharacter: PropTypes.string,
+    notCharacters: PropTypes.string,
 }
 
 export default FilterCharacter

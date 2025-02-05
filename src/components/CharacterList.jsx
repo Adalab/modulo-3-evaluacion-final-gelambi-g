@@ -1,4 +1,5 @@
 import CharacterCard from "./CharacterCard";
+import PropTypes from "prop-types";
 
 function CharacterList({characters}) {
   
@@ -9,6 +10,10 @@ function CharacterList({characters}) {
       {characterHTML}
     </div>
   )
+}
+
+CharacterList.propTypes = {
+  characters: PropTypes.array,
 }
 
 export default CharacterList
