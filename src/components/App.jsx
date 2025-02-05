@@ -8,14 +8,15 @@ function App() {
   
   const [character, setCharacter] = useState ([])
   const [filterNameCharacter, setFilterNameCharacter] = useState ("")
-  const [filterHouse, setFilterHouse] = useState ("Griffindor")
+  const [filterHouse, setFilterHouse] = useState ("Gryffindor")
 
 
   useEffect (() => {
-    getDataApi().then((data) => {
+    //recibe parametro de filterHouse porque es donde se guarda la información que cambia los datos y se pinta el array de la casa seleccionada
+    getDataApi(filterHouse).then((data) => {
       setCharacter(data)
     })
-  }, [])
+  }, [filterHouse])
 
   const notNameCharacter = () => {
     if(filterCharacters.length === 0) {
@@ -25,16 +26,21 @@ function App() {
 
   const filterCharacters = character
     .filter((item) => item.name.toLowerCase().includes(filterNameCharacter))
+    
+   
 
   return (
     <>
     <Routes>
       <Route path="/" element={
         <>
-        <Filters filterName={setFilterNameCharacter} 
+        <Filters 
+        filterName={setFilterNameCharacter} 
         filterNameCharacter={filterNameCharacter}
         notCharacters={notNameCharacter()}
-        filterHouse={setFilterHouse}
+
+        setFilterHouse={setFilterHouse}
+        filterHouse={filterHouse}
         />
         <CharacterList characters={filterCharacters}/>
 

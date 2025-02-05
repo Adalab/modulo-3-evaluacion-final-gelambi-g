@@ -1,5 +1,6 @@
-function getDataApi () {
-    return fetch("https://hp-api.onrender.com/api/characters/house/gryffindor")
+function getDataApi (searchHouse) {
+    //ponemos parametro porque va a depender de la casa que busque la usuaria
+    return fetch(`https://hp-api.onrender.com/api/characters/house/${searchHouse}`)
     .then ((resp) => resp.json())
     .then ((data) => {
         const newArrayCharacters = data.map((user) => {

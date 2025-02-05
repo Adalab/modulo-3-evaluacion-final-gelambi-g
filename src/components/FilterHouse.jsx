@@ -1,7 +1,17 @@
 
-function FilterHouse() {
+function FilterHouse({setFilterHouse,filterHouse}) {
+
+  const handleSelectHouse = (ev) => {
+    setFilterHouse(ev.target.value)
+  }
+
   return (
-    <div>FilterHouse</div>
+    <select onChange={handleSelectHouse} value={filterHouse}>
+      <option value="Gryffindor">Gryffindor</option>
+      <option value="Slytherin">Slytherin</option>
+      <option value="Hufflepuff">Hufflepuff</option>
+      <option value="Ravenclaw">Ravenclaw</option>
+    </select>
   )
 }
 
