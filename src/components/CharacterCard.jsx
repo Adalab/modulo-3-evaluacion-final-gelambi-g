@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import PropTypes from "prop-types";
+import "../styles/characterCard.scss";
 
 function CharacterCard({info}) {
 
@@ -9,10 +10,10 @@ function CharacterCard({info}) {
 
   return (
     <Link to={`/character/${info.id}`}>
-    <article>
-      <img src={info.img} alt={`Foto de ${info.name}`} />
-      <h3>{info.name}</h3>
-      <h4>Especie: {info.specie}</h4>
+    <article className="article_card">
+      <img src={info.img} alt={`Foto de ${info.name}`} className="article_img"/>
+      <h3 className="article_text">{info.name}</h3>
+      <h4 className="article_text">Especie: {info.specie}</h4>
     </article>
     </Link>
   )

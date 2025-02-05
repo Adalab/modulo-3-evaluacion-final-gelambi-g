@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import "../styles/filterCharacter.scss"
 
 function FilterCharacter({filterName, filterNameCharacter, notCharacters}) {
 
@@ -7,9 +8,11 @@ function FilterCharacter({filterName, filterNameCharacter, notCharacters}) {
   }
 
   return (
-    <div>
-      <label htmlFor="name">Nombre:</label>
-      <input type="text" name="name" id="name" onChange={handleInputCharacter} value={filterNameCharacter}/>
+    <div className="div_filter">
+      <div className="div_input">
+        <label htmlFor="name" className="label">Nombre:</label>
+        <input type="text" name="name" id="name" placeholder="Nombre del personaje" className="input_name" onChange={handleInputCharacter} value={filterNameCharacter}/>
+      </div>
       <span>{notCharacters}</span>
 
     </div>

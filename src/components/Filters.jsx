@@ -1,6 +1,7 @@
 import FilterCharacter from "./FilterCharacter"
 import FilterHouse from "./FilterHouse"
 import PropTypes from "prop-types";
+import "../styles/filter.scss"
 
 function Filters({filterName, filterNameCharacter, notCharacters, setFilterHouse, filterHouse}) {
 
@@ -9,7 +10,7 @@ function Filters({filterName, filterNameCharacter, notCharacters, setFilterHouse
   }
 
   return (
-    <form onSubmit={handleForm}>
+    <form onSubmit={handleForm} className="form">
       <FilterCharacter filterName={filterName}
       filterNameCharacter={filterNameCharacter}
       notCharacters={notCharacters}

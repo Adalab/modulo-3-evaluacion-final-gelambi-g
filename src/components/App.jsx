@@ -4,6 +4,8 @@ import CharacterList from "./CharacterList";
 import { matchPath, Route, Routes, useLocation } from "react-router-dom";
 import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
+import "../styles/App.scss";
+import logoHarryPotter from "../images/harry-potter.png";
 
 function App() {
   
@@ -37,7 +39,8 @@ function App() {
 
   return (
     <>
-    <Routes>
+    <header><img src={logoHarryPotter} alt="Harry Potter" className="img-logo"/></header>
+    <Routes >
       <Route path="/" element={
         <>
         <Filters 

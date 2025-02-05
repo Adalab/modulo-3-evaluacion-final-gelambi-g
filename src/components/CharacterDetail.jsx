@@ -1,3 +1,4 @@
+import "../styles/characterDetail.scss"
 import PropTypes from "prop-types";
 
 function CharacterDetail({data}) {
@@ -27,14 +28,15 @@ function CharacterDetail({data}) {
   }
 
   return (
-    <article>
+    <article className="article_detail">
       <img src={data.img} alt={`Foto de ${data.name}`} />
-      <h3>{data.name}</h3>
-      <p>Nombre alternativo: {data.nickName}</p>
-      <p>Genero: {data.gender}</p>
-      <p>Casa: {data.house}</p>
-      <p>Especie: {data.specie}</p>
-      <p>¿Sigue con vida?{data.alive}</p>
+      <h3 className="article_name">{data.name}</h3>
+      <span className="span_detail">Nombre alternativo:</span> 
+      <p className="nickName">{data.nickName}</p>
+      <p><span className="span_detail">Genero:</span> {data.gender}</p>
+      <p><span className="span_detail">Casa:</span> {data.house}</p>
+      <p><span className="span_detail">Especie:</span> {data.specie}</p>
+      <p><span className="span_detail">¿Sigue con vida?</span>{data.alive}</p>
     </article>
   )
 }
@@ -43,4 +45,4 @@ CharacterDetail.propTypes = {
   data: PropTypes.string
 }
 
-export default CharacterDetail
+export default CharacterDetaile

@@ -1,0 +1,22 @@
+.article_detail {
+    width: 300px;
+    background-color: rgba(189, 134, 15, 0.479);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.span_detail {
+    font-weight: bold;
+}
+
+.nickName {
+    display: flex;
+    flex-direction: column;
+}
+
+.article_name {
+    font-size: 25px;
+    text-decoration: underline;
+}
