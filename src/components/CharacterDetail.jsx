@@ -1,7 +1,12 @@
 import "../styles/characterDetail.scss"
 import PropTypes from "prop-types";
+import imgNoDispo from "../images/img-no-disp.png"
 
 function CharacterDetail({data}) {
+
+    if (data.img === "") {
+      data.img= imgNoDispo
+    }
 
   if (data.nickName.length === 0) {
     data.nickName = "No tiene"
