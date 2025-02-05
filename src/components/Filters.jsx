@@ -1,7 +1,7 @@
 import FilterCharacter from "./FilterCharacter"
 
 
-function Filters({filterName, filterNameCharacter, notCharacters}) {
+function Filters({filterName, filterNameCharacter, notCharacters, filterHouse}) {
 
   const handleForm = (ev) => {
     ev.preventDefault()
@@ -11,7 +11,8 @@ function Filters({filterName, filterNameCharacter, notCharacters}) {
     <form onSubmit={handleForm}>
       <FilterCharacter filterName={filterName}
       filterNameCharacter={filterNameCharacter}
-      notCharacters={notCharacters}/>
+      notCharacters={notCharacters}
+      filterHouse={filterHouse}/>
     </form>
   )
 }

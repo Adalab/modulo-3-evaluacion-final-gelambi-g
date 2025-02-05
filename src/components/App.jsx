@@ -8,6 +8,7 @@ function App() {
   
   const [character, setCharacter] = useState ([])
   const [filterNameCharacter, setFilterNameCharacter] = useState ("")
+  const [filterHouse, setFilterHouse] = useState ("Griffindor")
 
 
   useEffect (() => {
@@ -17,8 +18,8 @@ function App() {
   }, [])
 
   const notNameCharacter = () => {
-    if(character === "") {
-      span.innherHTML = `No hay ningún personaje que coincida con la palabra ${filterName(ev.target.value)}`
+    if(filterCharacters.length === 0) {
+      return `No hay ningún personaje que coincida con la palabra ${filterNameCharacter}`
     }
   }
 
@@ -32,7 +33,9 @@ function App() {
         <>
         <Filters filterName={setFilterNameCharacter} 
         filterNameCharacter={filterNameCharacter}
-        notCharacters={notNameCharacter()}/>
+        notCharacters={notNameCharacter()}
+        filterHouse={setFilterHouse}
+        />
         <CharacterList characters={filterCharacters}/>
 
         </>
