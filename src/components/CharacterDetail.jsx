@@ -45,4 +45,4 @@ CharacterDetail.propTypes = {
   data: PropTypes.string
 }
 
-export default CharacterDetaile
+export default CharacterDetail

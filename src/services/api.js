@@ -15,6 +15,7 @@ function getDataApi (searchHouse) {
                 specie: user.species
             };
         });
+        newArrayCharacters.sort((a, b) => a.name.localeCompare(b.name))
         return newArrayCharacters;
     });
 }

@@ -1,11 +1,16 @@
 import { Link } from "react-router-dom"
 import PropTypes from "prop-types";
+import imgNoDispo from "../images/img-no-disp.png"
 import "../styles/characterCard.scss";
 
 function CharacterCard({info}) {
 
   if (info.img === "") {
-    info.img= "https://placehold.co/200x250?text=Imagen+no+disponible"
+    info.img= imgNoDispo
+  }
+
+  if (info.specie === "human") {
+    info.specie = "Humana"
   }
 
   return (
