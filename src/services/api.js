@@ -1,8 +1,8 @@
-function api () {
-    fetch("https://hp-api.onrender.com/")
+function getDataApi () {
+    return fetch("https://hp-api.onrender.com/api/characters/house/gryffindor")
     .then ((resp) => resp.json())
     .then ((data) => {
-        const newArray = data.results.map((user) => {
+        const newArrayCharacters = data.map((user) => {
             return {
                 id: user.id,
                 img: user.image,
@@ -14,8 +14,8 @@ function api () {
                 specie: user.species
             };
         });
-        return newArray;
+        return newArrayCharacters;
     });
 }
 
-export default api;
+export default getDataApi;
