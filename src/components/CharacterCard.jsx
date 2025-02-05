@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 
 function CharacterCard({info}) {
@@ -7,11 +8,13 @@ function CharacterCard({info}) {
   }
 
   return (
+    <Link to={`/character/${info.id}`}>
     <article>
-      <img src={info.img} alt="Foto del personaje" />
+      <img src={info.img} alt={`Foto de ${info.name}`} />
       <h3>{info.name}</h3>
       <h4>Especie: {info.specie}</h4>
     </article>
+    </Link>
   )
 }
 
