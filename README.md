@@ -16,7 +16,9 @@ App.jsx
       - FilterHouse.jsx
   - CharacterDetail.jsx
 
+
 **Componentes**
+
 APP.jsx: 
   - Como componente principal contiene todas las variables de estado
   - UseEffect: hook recibe los datos de la API, con el parametro del filtro de la casa, para que se pinte la lista dependiendo de la casa seleccionada por la usuaria
@@ -53,13 +55,17 @@ CharacterDetail.jsx:
   - Return con operador ternario, para si se recarga la página siga saliendo la tarjeta (sólo funciona con la casa Gryffindor, en desarrollo las otras 3 casas) y si el enlace no coincide, salga un mensaje
   - Article con más datos que si piden a la API y que amplian la información de cada personaje. Los datos que devuelven información en inglés tienen un operador ternario para que los pinte en español
 
+
 **Services**
+
 API.js:
   - Función con la petición de los datos a la API
   - Petición con parámetro para que se pinten la lista dependiendo de la casa seleccionada por la usuária
   - Función sort() para que el array de los personajes se ordene alfabéticamente
 
+
 **SCSS**
+
   - Cada componente tiene su fichero SCSS, importado y con el mismo nombre
   - En la maquetación se ha utilitzado tanto flex como grid
   - Mediaqueries: en tablet los personajes se ponen en dos columnas, en desktop en tres
