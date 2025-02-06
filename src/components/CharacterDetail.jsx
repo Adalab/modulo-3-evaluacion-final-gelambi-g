@@ -15,7 +15,7 @@ function CharacterDetail({data}) {
       <p><span className="span_detail">Genero:</span> {data.gender === "male" ? "Masculino" : data.gender === "female" ? "Femenino" : "Otro"}</p>
       <p><span className="span_detail">Casa:</span> {data.house}</p>
       <p><span className="span_detail">Especie:</span> {data.specie === "human" ? "Humana" : "Otra"}</p>
-      <p><span className="span_detail">¿Sigue con vida?</span>{data.alive}</p>
+      <p><span className="span_detail">¿Sigue con vida?</span>{data.alive === true ? " Si" : " No"}</p>
     </article>
   ) : <p>Noy hay datos disponibles</p>
 }
