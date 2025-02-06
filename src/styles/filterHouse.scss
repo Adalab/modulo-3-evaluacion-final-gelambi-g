@@ -1,0 +1,20 @@
+.select_house {
+    margin: 5px;
+    height: 30px;
+    width: 180px;
+    border-radius: 20px;
+    border: solid rgba(189, 134, 15, 0.479);
+    background-color: rgb(212, 198, 198);
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.label_house {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+ 
+   align-items: center;
+   
+}

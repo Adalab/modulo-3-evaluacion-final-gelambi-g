@@ -1,0 +1,25 @@
+
+
+.div_input {
+   margin: 20px; 
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   width: 200px;
+   align-items: center;
+}
+
+.label {
+    margin: 10px;
+    width: 200px;
+}
+
+.input_name {
+    height: 20px;
+    border-radius: 20px;
+    border: solid rgba(189, 134, 15, 0.479);
+    background-color: rgb(212, 198, 198);
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}

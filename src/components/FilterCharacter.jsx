@@ -10,8 +10,8 @@ function FilterCharacter({filterName, filterNameCharacter, notCharacters}) {
   return (
     <div className="div_filter">
       <div className="div_input">
-        <label htmlFor="name" className="label">Nombre:</label>
-        <input type="text" name="name" id="name" placeholder="Nombre del personaje" className="input_name" onChange={handleInputCharacter} value={filterNameCharacter}/>
+        <label htmlFor="name" className="label">Buscar personaje: </label>
+        <input type="text" name="name" id="name" placeholder="Nombre personaje" className="input_name" onChange={handleInputCharacter} value={filterNameCharacter}/>
       </div>
       <span>{notCharacters}</span>
 
