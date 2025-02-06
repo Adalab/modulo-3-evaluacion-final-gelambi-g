@@ -4,50 +4,24 @@ import imgNoDispo from "../images/img-no-disp.png"
 
 function CharacterDetail({data}) {
 
-    if (data.img === "") {
-      data.img= imgNoDispo
-    }
 
-  if (data.nickName.length === 0) {
-    data.nickName = "No tiene"
-  }
-
-  if (data.gender === "male") {
-    data.gender = "Masculino";
-  } else if (data.gender === "female") {
-    data.gender = "Femenino";
-  } else {
-    data.gender = "Otro";
-  }
-  
-
-
-  if (data.specie === "human") {
-    data.specie = "Humana"
-  }
-
-  if (data.alive) {
-    data.alive = " Si"
-  } else {
-    data.alive = " No"
-  }
-
-  return (
-    <article className="article_detail">
-      <img src={data.img} alt={`Foto de ${data.name}`} />
+  return data ? (
+    
+    <article className="article_detail"> 
+      <img src={data.img || imgNoDispo} alt={`Foto de ${data.name}`} className="article_img"/>
       <h3 className="article_name">{data.name}</h3>
       <span className="span_detail">Nombre alternativo:</span> 
-      <p className="nickName">{data.nickName}</p>
-      <p><span className="span_detail">Genero:</span> {data.gender}</p>
+      <p className="nickName">{data.nickName.length > 0 ? data.nickName : "No tiene"}</p>
+      <p><span className="span_detail">Genero:</span> {data.gender === "male" ? "Masculino" : data.gender === "female" ? "Femenino" : "Otro"}</p>
       <p><span className="span_detail">Casa:</span> {data.house}</p>
-      <p><span className="span_detail">Especie:</span> {data.specie}</p>
+      <p><span className="span_detail">Especie:</span> {data.specie === "human" ? "Humana" : "Otra"}</p>
       <p><span className="span_detail">¿Sigue con vida?</span>{data.alive}</p>
     </article>
-  )
+  ) : <p>Noy hay datos disponibles</p>
 }
 
 CharacterDetail.propTypes = {
-  data: PropTypes.string
+  data: PropTypes.object
 }
 
 export default CharacterDetail
